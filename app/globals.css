@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 18% 4%;
+    --foreground: 140 25% 88%;
+
+    --card: 150 16% 6%;
+    --card-foreground: 140 25% 88%;
+
+    --popover: 150 16% 6%;
+    --popover-foreground: 140 25% 88%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 150 30% 4%;
+
+    --secondary: 150 12% 12%;
+    --secondary-foreground: 140 25% 88%;
+
+    --muted: 150 12% 10%;
+    --muted-foreground: 145 10% 52%;
+
+    --accent: 38 92% 55%;
+    --accent-foreground: 40 40% 6%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 150 14% 14%;
+    --input: 150 14% 14%;
+    --ring: 142 70% 45%;
+
+    --profit: 142 70% 48%;
+    --loss: 0 72% 58%;
+    --signal: 38 92% 55%;
+
+    --radius: 0.375rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Subtle terminal scanline / grid background */
+.terminal-grid {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.25) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Thin custom scrollbars for terminal panels */
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+}
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}

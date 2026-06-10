@@ -1,0 +1,17 @@
+{
+  "name": "FluxBot Terminal",
+  "short_name": "FluxBot",
+  "description": "Live cross-exchange statistical arbitrage terminal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070d0a",
+  "theme_color": "#070d0a",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
