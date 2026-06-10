@@ -1,0 +1,1 @@
+// shadcn card component stub - install via CLI in practice
