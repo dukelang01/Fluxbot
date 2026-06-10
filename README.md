@@ -1,1 +1,1 @@
-Full README content placeholder - see file in repo
+# FluxBot ... (full content)
