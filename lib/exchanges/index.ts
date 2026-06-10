@@ -1,0 +1,1 @@
+Exchange manager with CCXT
